@@ -34,10 +34,10 @@ def power_offset_model(x_val, a, b, c):
 # Функция для подбора параметров с ограничением a >= 0.0001
 def fit_power_offset_model(x_data, y_data):
     # Начальные значения параметров (можно изменить при необходимости)
-    initial_guess = [0.0001, 13.0, 28.0]
+    initial_guess = [1, 2.0, 150.0]
 
     # Ограничения: a >= 0.0001, b и c без ограничений
-    bounds = ([0.0001, -np.inf, -np.inf], [np.inf, np.inf, np.inf])
+    bounds = ([1, -np.inf, -np.inf], [np.inf, np.inf, np.inf])
 
     try:
         # Подбор параметров методом наименьших квадратов
